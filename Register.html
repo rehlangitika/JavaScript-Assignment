@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang = "en" >
+    <head>
+    <title>Register</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <script src = "bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+        <script src = "bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <script src = "RegisterJS.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class = "row">
+                <div class = "col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                    <div id="image-register">
+                        <img id = "img-register" src = "register.png" alt="Register Here" />
+                    </div>
+                <form class= "form-horizontal" name = "register" method = "post" onsubmit="return registerValidation()">
+                <fieldset>
+                <legend>REGISTER</legend>
+                <div class = "form-group">
+                    <label for="name">Name: </label>
+                    <input type = "text" id = "name" class = "form-control name" name = "user-name" placeholder = "Name"/>
+                </div>
+                <div class = "form-group">
+                    <label for="dob">Date of Birth: </label>
+                    <input type = "date" id = "dob" class = "form-control dob" name = "user-dob"/>
+                </div>
+                <div class = "form-group">
+                    <label for="radio-btn">Gender:</label>
+                    <label class="radio-inline">
+                    <input type = "radio" name = "radio-gender"  id = "radio-male" value = "Male" />Male
+                    </label>
+                    <label class="radio-inline">
+                    <input type = "radio" name = "radio-gender"  id = "radio-female" value = "Female"  />Female
+                    </label>
+                </div>
+                <div class = "form-group">
+                    <label for="email-address">Email Address: </label>
+                    <input type = "email" id = "email-address" class = "form-control email-address" name = "email-address" placeholder = "user@domain.com" />
+                </div>
+                <div class = "form-group">
+                    <label class = "checkbox-inline">
+                        <input id = "agree-checkbox" type = "checkbox" name="checkbox" onchange = "checkboxEnabled()" value= "I agree to the terms and conditions" /><a href = "#" style="text-decoration: underline;" >I agree to the terms and conditions</a>
+                    </label>
+                </div>
+                <div class = "form-group">
+                    <button type= "submit" name = "btn-register" class = "btn btn-success btn-lg" disabled = "true" >
+                    <span class = "glyphicon glyphicon-ok" style="color: white;" area-hidden = "true"> Register</span>
+                    </button>
+                </div>
+            </fieldset>  
+        </form>
+                </div>
+                <div class = "col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                </div>
+                <div class = "col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                    <strong><div id = "timer" style = "margin-top: 30px;"></div></strong>
+                    <div id="image-login">
+                        <img id = "img-login" src = "login.jpg" alt="Login Here" height = "150px"/>
+                    </div>
+                    <div></div>
+                    <form class = "form-horizontal" name = "login" method = "post" onsubmit = "loginValidation()">
+                        <fieldset>
+                            <legend>LOGIN</legend>
+                            <div class = "form-group">
+                                <label for = "user-email">Email Address: </label>
+                                <input type = "email" id = "user-email-id" class = "form-control" name = "user-email" placeholder = "user@domain.com"/>
+                            </div>
+                            <div class = "form-group">
+                                <label for = "password" >Password: </label>
+                                <input type = "password" id = "password" name = "password" class = "form-control" />
+                            </div>
+                            <div class = "form-group">
+                                <a href style="text-decoration: underline;" = "#">Forgot Password ?</a>
+                            </div>
+                            <div class = "form-group">
+                                <button type= "submit" name = "btn-login" class = "btn btn-warning btn-lg">
+                                <span class = "glyphicon glyphicon-ok" style="color: white;" area-hidden = "true"> Login</span>
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
